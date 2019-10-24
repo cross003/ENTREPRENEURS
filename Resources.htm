@@ -19,6 +19,23 @@
   background-color: #ccc; 
 }
 
+/* Add a card effect for articles */
+.card {
+  left: -40px;
+  position: relative;
+  width: 115%;
+  background-color: white;
+  outline-color: white;
+  padding: 20px;
+}
+	
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+	
 .panel {
   padding: 0 18px;
   display: none;
@@ -134,6 +151,10 @@ a:active {
 	<a href="https://cross003.github.io/Entrepreneurs/Contact.htm" style="float:right">Contact Us</a>
   </div>
 </div>
+
+   <div class="card">
+      <h5>Helpful Resources /</h5>
+   </div>
 	<button class="accordion">A/B tests</button>
 	<div class="panel">
 		<h3>A/B testing your website will be crucial to your continued success and improvements online. A startup should always be testing what's working and improving on it.</h3>
