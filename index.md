@@ -179,7 +179,7 @@ h1.b {
 
 <div class="topnav">
   <div class ="sticky">
-	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/index.htm">Home</a>
+	<a href="https://cross003.github.io/ENTREPRENEURS/">Home</a>
 	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/Board.htm">Board</a>
 	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/Resources.htm">Resources</a>
 	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/Calender.htm">Calender</a>
