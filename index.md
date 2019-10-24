@@ -14,6 +14,10 @@ body {
   background-size: cover;
 }
 
+hr.line {
+  border-top: 1px solid white;
+}
+
 /* Header */
 .header {
   top: 50 px;
@@ -23,10 +27,12 @@ body {
   text-align-last: center;
   background: gold;
   margin: 100px auto 150px auto;
+  align-content: stretch;
 }
 
 p.big {
   line-height: 5;
+  color: white;
 }
 
 .header h1 {
@@ -42,6 +48,7 @@ p.big {
   overflow: hidden;
   background-color: white;
   width:100%;
+  height: 60px;
   opacity: 0.75;
 }
 
@@ -88,10 +95,9 @@ p.big {
 
 /* Add a card effect for articles */
 .card {
-  left: 0px;
-  bottom:40px;
+  left: -40px;
   position: relative;
-  width: 100%;
+  width: 115%;
   background-color: white;
   outline-color: white;
   padding: 20px;
@@ -99,16 +105,29 @@ p.big {
 
 /* Add a card effect for articles */
 .card2 {
-text-align: justify;
+  color: white;
+  text-align: justify;
   text-align-last: center;
-  left: 0px;
-  bottom:40px;
+  left: -40px;
   position: relative;
-  width: 100%;
+  width: 115%;
   background-color: gold;
   outline-color: gold;
   padding: 20px;
 }
+
+/* Add a card effect for articles */
+.card3 {
+  text-align: justify;
+  text-align-last: center;
+  left: -40px;
+  position: relative;
+  width: 115%;
+  background-color: gold;
+  outline-color: gold;
+  padding: 20px;
+}
+
 
 /* Clear floats after the columns */
 .row:after {
@@ -119,12 +138,23 @@ text-align: justify;
 
 /* Footer */
 .footer {
-  left: 0px
-  position:absolute;  
-  padding: 20px;
+  position:absolute; 
+  width:100%;  
+  left: 0px;
   text-align: center;
   background: #ddd;
-  margin-top: 20px;
+  margin: 0;
+}
+div.absolute {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+}
+
+h1.b {
+  font-stretch: expanded;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -149,7 +179,7 @@ text-align: justify;
 
 <div class="topnav">
   <div class ="sticky">
-	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/index.htm">Schedule</a>
+	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/index.htm">Home</a>
 	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/Board.htm">Board</a>
 	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/Resources.htm">Resources</a>
 	<a href="file:///C:/Users/tre90/Desktop/Engl393%20Group%20Proj/Calender.htm">Calender</a>
@@ -161,8 +191,9 @@ text-align: justify;
 
 
 <div class="header">
-  <h1>UMBC</h1>
-  <h1>Entrepreneurs </h1>  
+  <h1 class ="b">UMBC</h1>
+  <h1 class ="b">Entrepreneurs </h1>  
+  <hr class="line">
   <p class = "big">HUSTLE | GRIND | INSPIRE </p>
 </div>
 
@@ -170,7 +201,10 @@ text-align: justify;
 
 
 <div class="row">
-    <div class="card">
+    <div class="card3">
+	  <h2>Join the Email List for Events, Resources and Exclusive Access</h2>
+    </div>
+	<div class="card">
       <h5>WHEN /</h5>
 	  <h2>WEDNESDAYS 12 PM - 1 PM DURING FREE HOUR</h2>
       <h5>WHERE /</h5>
@@ -196,8 +230,8 @@ text-align: justify;
   
 </div>
 
-<div class="footer">
-  <h5>© 2019 by UMBC Entrepreneurs. Proudly created by UMBC eShip. For Questions /  Contact us at umbcentrepreneurs@gmail.com.</h5>
+<div class="footer">	
+		<h5>© 2019 by UMBC Entrepreneurs. Proudly created by UMBC eShip. For Questions /  Contact us at umbcentrepreneurs@gmail.com.</h5>
 </div>
 
 </body>
