@@ -51,7 +51,7 @@
   position:absolute; 
   width:100%;  
   left: 0px;
-  bottom: 0px;
+  bottom: -200px;
   text-align: center;
   background: #ddd;
   margin: 0;
@@ -72,81 +72,16 @@
 	<a href="https://cross003.github.io/Entrepreneurs/">Home</a>
 	<a href="https://cross003.github.io/Entrepreneurs/Board.htm">Board</a>
 	<a href="https://cross003.github.io/Entrepreneurs/Resources.htm">Resources</a>
-	<a href="https://cross003.github.io/Entrepreneurs/Calendar.htm">Calendar</a>
+	<a href="https://cross003.github.io/Entrepreneurs/Calender.htm">Calendar</a>
 	<a href="https://cross003.github.io/Entrepreneurs/Contact.htm" style="float:right">Contact Us</a>
   </div>
 </div>
         <div class="content">
-         
+         <iframe src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23E4C441&amp;ctz=America%2FNew_York&amp;src=dW1iYy5lZHVfNWR2bmRwNTQxY2xkbzZkOXAwY3F2MGJ2bm9AZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23AD1457&amp;color=%230B8043&amp;showTz=1&amp;showCalendars=1&amp;showTabs=1&amp;showPrint=0&amp;showNav=1&amp;showTitle=0" style="margin: 100px auto 150px auto" width="100%" height="600" frameborder="0" scrolling="no"   ;></iframe>
 
-            <div class="area-buttons" style="margin-top: 50px">
-                <button class="info" name="pastDates">Disable past dates</button>
-                <button class="info" name="availableDates">Set available dates</button>
-                <button class="info" name="availableWeekDays">Set available weekdays</button>
-            </div>
-            <div id="myCalendar" class="vanilla-calendar" style="margin-bottom: 20px"></div>
+</div>
 
-        <script>
-            let pastDates = true, availableDates = false, availableWeekDays = false
-            
-            let calendar = new VanillaCalendar({
-                selector: "#myCalendar",
-                months: ["January", "Fevereiro", "Marçh", "April", "May", "June", "July", "Agosto", "September", "October", "November", "December"],
-                shortWeekday: ['Sun', 'Mon', 'Tues', 'Wed', 'Thur', 'Fri', 'Sat'],
-                onSelect: (data, elem) => {
-                    console.log(data, elem)
-                }
-            })
-            
-            let btnPastDates = document.querySelector('[name=pastDates]')
-            btnPastDates.addEventListener('click', () => {
-                pastDates = !pastDates
-                calendar.set({pastDates: pastDates})
-                btnPastDates.innerText = `${(pastDates ? 'Disable' : 'Enable')} past dates`
-            })
-            
-            let btnAvailableDates = document.querySelector('[name=availableDates]')
-            btnAvailableDates.addEventListener('click', () => {
-                availableDates = !availableDates
-                btnAvailableDates.innerText = `${(availableDates ? 'Clear available dates' : 'Set available dates')}`
-                if (!availableDates) {
-                    calendar.set({availableDates: [], datesFilter: false})
-                    return
-                }
-                let dates = () => {
-                    let result = []
-                    for (let i = 1; i < 15; ++i) {
-                        if (i % 2) continue
-                        let date = new Date(new Date().getTime() + (60 * 60 * 24 * 1000) * i)
-                        result.push({date: `${String(date.getFullYear())}-${String(date.getMonth() + 1).padStart(2, 0)}-${String(date.getDate()).padStart(2, 0)}`})
-                    }
-                    return result
-                }
-                calendar.set({availableDates: dates(), availableWeekDays: [], datesFilter: true})
-            })
-            
-            let btnAvailableWeekDays = document.querySelector('[name=availableWeekDays]')
-            btnAvailableWeekDays.addEventListener('click', () => {
-                availableWeekDays = !availableWeekDays
-                btnAvailableWeekDays.innerText = `${(availableWeekDays ? 'Clear available weekdays' : 'Set available weekdays')}`
-                if (!availableWeekDays) {
-                    calendar.set({availableWeekDays: [], datesFilter: false})
-                    return
-                }
-                let days = [{
-                    day: 'monday'
-                }, {
-                    day: 'tuesday'
-                }, {
-                    day: 'wednesday'
-                }, {
-                    day: 'friday'
-                }]
-                calendar.set({availableWeekDays: days, availableDates: [], datesFilter: true})
-            })
-        </script>
-		
-	<div class="footer">	
+<div class="footer">	
 		<h5>© 2019 by UMBC Entrepreneurs. Proudly created by UMBC eShip. For Questions /  Contact us at entrepreneurs@umbc.edu.</h5>
 </div>
     </body>
